@@ -1,9 +1,11 @@
-import "./Ruleta.css";
+/*eslint-disable*/
+import "./ruleta.css";
 import { useRef, useState, useEffect } from "react";
 
 function Ruleta() {
   const ruleta = [0,10,0,2,0,15,0,4,0,5];
   const [winnerIndex, setWinnerIndex] = useState(-1);
+  
   const [canvasContext, setCanvasContext] = useState(null);
   const canvasRef = useRef(null);
 

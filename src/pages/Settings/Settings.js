@@ -49,7 +49,7 @@ function handleSubmit(event){
         })
         .catch((err)=>{console.log(err)})
     }else{
-      setContent(<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>)
+      setContent(<div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>)
   event.handleFileInputChange()
   event.handleUpload()
     }  
@@ -71,36 +71,36 @@ function handleChange(e){
             <div className="settings-form d-flex flex-column animate__animated animate__backInLeft">
             {!user.couple && <>
             <div className="d-flex justify-content-end"><img className="s-arrow" src={arrow}/></div>
-            <label for="username" class="form-label text-start text-white">Ingresa el username de tu pareja</label>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Pareja</span>
-            <input onChange={handleChange} type="text" class="form-control" placeholder="juan22." aria-label="Username" aria-describedby="basic-addon1" id="username" name="userName" value={couple.userName} />
+            <label for="username" className="form-label text-start text-white">Ingresa el username de tu pareja</label>
+            <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">Pareja</span>
+            <input onChange={handleChange} type="text" className="form-control" placeholder="juan22." aria-label="Username" aria-describedby="basic-addon1" id="username" name="userName" value={couple.userName} />
             </div>
-            <label for="nombre" class="form-label text-start text-white">Inventa un nombre para tu pareja</label>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Nombre</span>
-            <input onChange={handleChange} type="text" class="form-control" placeholder="solYJuan" aria-label="Username" aria-describedby="basic-addon1" id="nombre" name="coupleName" value={couple.coupleName}/>
+            <label for="nombre" className="form-label text-start text-white">Inventa un nombre para tu pareja</label>
+            <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">Nombre</span>
+            <input onChange={handleChange} type="text" className="form-control" placeholder="solYJuan" aria-label="Username" aria-describedby="basic-addon1" id="nombre" name="coupleName" value={couple.coupleName}/>
             </div>
             <div className="d-flex justify-content-start"><img className="s-arrow-l" src={arrow}/></div>
             </>}
             {user.couple && <>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Username</span>
+            <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">Username</span>
             <input type="text" class="form-control" placeholder={user.name} aria-label="Username" aria-describedby="basic-addon1" disabled/>
             </div>
-            <div class=" input-group mb-3">
-            <input class="form-control" type="file" onChange={handleFileInputChange} id="formFile" disabled={!editView && true}/>
+            <div className=" input-group mb-3">
+            <input className="form-control" type="file" onChange={handleFileInputChange} id="formFile" disabled={!editView && true}/>
             </div>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Email</span>
+            <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">Email</span>
             <input type="text" class="form-control" placeholder={user.email} aria-label="Username" aria-describedby="basic-addon1" disabled/>
             </div>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Pareja</span>
+            <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">Pareja</span>
             <input type="text" class="form-control" placeholder={user.couple ? user.couple.coupleName : "No hay una pareja asociada..."} aria-label="Username" aria-describedby="basic-addon1" disabled/>
             </div>
-            <div class="input-group mb-5">
-            <span class="input-group-text" id="basic-addon1">Puntos</span>
+            <div className="input-group mb-5">
+            <span className="input-group-text" id="basic-addon1">Puntos</span>
             <input type="text" class="form-control" placeholder={user.puntos || "0"} aria-label="Username" aria-describedby="basic-addon1" disabled/>
             </div>
             </>}
